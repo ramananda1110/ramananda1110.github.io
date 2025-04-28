@@ -21,6 +21,6 @@ You can check out the live version of my portfolio at [ramananda.github.io](http
 ## Get In Touch
 - Email: [rshc4u@gmail.com](mailto:rshc4u@gmail.com)
 - LinkedIn: [Ramananda Sarkar](https://www.linkedin.com/in/ramananda-sarkar/)
-- GitHub: [ramananda](https://github.com/ramananda)
+- GitHub: [ramananda](https://github.com/ramananda1110)
 
 Feel free to explore, and don't hesitate to reach out for any questions or collaborations!
