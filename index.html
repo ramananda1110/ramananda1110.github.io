@@ -832,12 +832,44 @@
       </div>
 
       <!-- Google Form Redirect Button -->
-      <div class="form-container text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+      <!-- <div class="form-container text-center mt-5" data-aos="fade-up" data-aos-delay="300">
         <p class="mb-3">Prefer to send a message? Click below to fill out the form.</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSekN00-Q9pZaN05Gn6g9lv_EcctrekM2eX_q8RLWNybi5VRPg/viewform?usp=header" target="_blank" class="btn btn-primary px-4 py-2" style="font-size: 1.1rem;">
           Open Contact Form
         </a>
-      </div><!-- End Form Redirect -->
+      </div> -->
+      <!-- End Form Redirect -->
+
+      <form action="https://formspree.io/f/https://formspree.io/f/xzzrrdjv" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+        <div class="row gy-4">
+     
+           <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+           </div>
+     
+           <div class="col-md-6 ">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+           </div>
+     
+           <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+           </div>
+     
+           <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+           </div>
+     
+           <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+     
+              <button type="submit">Send Message</button>
+           </div>
+     
+        </div>
+     </form>
+     
 
     </div>
 
