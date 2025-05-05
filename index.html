@@ -929,7 +929,7 @@
   const form = document.getElementById("contact-form");
 
   form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // Prevent default submission
+    e.preventDefault();
 
     const formData = new FormData(form);
     const response = await fetch(form.action, {
@@ -941,9 +941,10 @@
     });
 
     if (response.ok) {
-      window.location.href = "https://ramananda1110.github.io/thanks.html";
+      alert("🎉 Your message has been sent successfully!");
+      form.reset();
     } else {
-      alert("Oops! There was a problem submitting your form.");
+      alert("❌ Oops! Something went wrong. Please try again.");
     }
   });
 </script>
