@@ -859,6 +859,9 @@
           </div>
       
           <div class="col-md-12 text-center">
+            <div class="loading">Loading</div>
+            <!-- <div class="error-message"></div> -->
+            <div class="sent-message">Your message has been sent. Thank you!</div>
             <button type="submit">Send Message</button>
           </div>
         </div>
@@ -927,9 +930,16 @@
 
 <script>
   const form = document.getElementById("contact-form");
+  const sentMessage = document.querySelector(".sent-message");
+  const errorMessage = document.querySelector(".error-message");
+  const loading = document.querySelector(".loading");
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
+
+    sentMessage.style.display = "none";
+    errorMessage.style.display = "none";
+    loading.style.display = "block";
 
     const formData = new FormData(form);
     const response = await fetch(form.action, {
@@ -940,11 +950,14 @@
       }
     });
 
+    loading.style.display = "none";
+
     if (response.ok) {
-      alert("🎉 Your message has been sent successfully!");
+      sentMessage.style.display = "block";
       form.reset();
     } else {
-      alert("❌ Oops! Something went wrong. Please try again.");
+      errorMessage.textContent = "There was a problem submitting your form.";
+      errorMessage.style.display = "block";
     }
   });
 </script>

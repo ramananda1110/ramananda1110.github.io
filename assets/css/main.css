@@ -1682,3 +1682,8 @@ section,
 
 
   
+.sent-message,
+.error-message,
+.loading {
+  display: none;
+}
