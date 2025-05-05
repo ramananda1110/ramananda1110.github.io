@@ -840,7 +840,8 @@
       </div> -->
       <!-- End Form Redirect -->
 
-      <form id="contact-form" action="https://formspree.io/f/xzzrrdjv" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
+      <form id="contact-form" action="https://formspree.io/f/xzzrrdjv" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+
         <div class="row gy-4">
           <div class="col-md-6">
             <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -859,9 +860,9 @@
           </div>
       
           <div class="col-md-12 text-center">
-            <div class="loading">Loading</div>
-            <!-- <div class="error-message"></div> -->
-            <div class="sent-message">Your message has been sent. Thank you!</div>
+            <!-- <div class="loading">Loading</div> -->
+            <!-- <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div> -->
             <button type="submit">Send Message</button>
           </div>
         </div>
@@ -930,16 +931,9 @@
 
 <script>
   const form = document.getElementById("contact-form");
-  const sentMessage = document.querySelector(".sent-message");
-  const errorMessage = document.querySelector(".error-message");
-  const loading = document.querySelector(".loading");
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
-
-    sentMessage.style.display = "none";
-    errorMessage.style.display = "none";
-    loading.style.display = "block";
 
     const formData = new FormData(form);
     const response = await fetch(form.action, {
@@ -950,14 +944,11 @@
       }
     });
 
-    loading.style.display = "none";
-
     if (response.ok) {
-      sentMessage.style.display = "block";
+      alert("🎉 Your message has been sent successfully!");
       form.reset();
     } else {
-      errorMessage.textContent = "There was a problem submitting your form.";
-      errorMessage.style.display = "block";
+      alert("❌ Oops! Something went wrong. Please try again.");
     }
   });
 </script>
